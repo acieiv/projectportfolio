@@ -54,3 +54,54 @@ body {
 li:hover .sub-category {
     display: block;
 }
+
+
+.project-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 40px;
+}
+
+.project {
+    height: 200px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;  /* To ensure it's above other elements */
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: -300px;  /* Initially hidden to the left */
+    width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s;  /* Smooth transition */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.navbar li {
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
