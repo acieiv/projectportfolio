@@ -19,6 +19,10 @@ body {
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
+    padding: 5px 15px;  /* Add some padding for a bigger clickable area */
+    background-color: #1a1a1a;  /* Match the header background */
+    border: none;  /* Remove any default borders */
+    color: #eaeaea;  /* Match the text color */
 }
 
 .navbar {
@@ -64,11 +68,28 @@ li:hover .sub-category {
 
 .project {
     height: 200px;
-    background-color: #1a1a1a;
+    background-color: #222;  /* Slightly lighter than the page background */
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     cursor: pointer;
+    border: 2px solid #3a3a3a;  /* Adding a border for visibility */
+}
+
+.add-project-btn {
+    font-size: 2rem;  /* Increase the font size */
+    background-color: #3a3a3a;  /* Dark gray background */
+    color: #eaeaea;  /* Light gray color for the + symbol */
+    border: none;  /* Remove default border */
+    border-radius: 50%;  /* Make it circular */
+    width: 50px;  /* Fixed width */
+    height: 50px;  /* Fixed height */
+    cursor: pointer;  /* Hand cursor on hover */
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+}
+
+.add-project-btn:hover {
+    background-color: #4a4a4a;  /* Slightly lighter gray on hover */
 }
