@@ -12,27 +12,32 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #1a1a1a;
+    background-color: #202020;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
-    padding: 5px 15px;  /* Add some padding for a bigger clickable area */
-    background-color: #1a1a1a;  /* Match the header background */
-    border: none;  /* Remove any default borders */
-    color: #eaeaea;  /* Match the text color */
+    padding: 5px 15px;  
+    background-color: #202020;  
+    border: none;  
+    color: #eaeaea;  
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
 }
 
 .navbar {
     position: absolute;
-    top: 0;
-    left: -300px;  
+    top: 40px;  /* Increase this to move the navbar items further down */
+    left: 0;  
     width: 300px;
-    height: 100vh;
-    background-color: #1a1a1a;
+    height: calc(100vh - 60px);  /* Adjusting the height to account for the top offset */
+    background-color: rgba(32, 32, 32, 0.75);
     transition: left 0.3s;  
+    overflow-y: auto;  /* Add a scrollbar if the content overflows */
 }
 
 .navbar ul {
@@ -93,3 +98,25 @@ li:hover .sub-category {
 .add-project-btn:hover {
     background-color: #4a4a4a;  /* Slightly lighter gray on hover */
 }
+
+.header h1 {
+    margin-left: auto;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the title and box horizontally */
+}
+
+.project-container h2 {
+    margin-bottom: 10px;  /* Space between the title and the box */
+}
+
+#gift-selector {
+    background-image: url('Pics/GiftSelector_CityView.png');  /* Replace with your image path */
+    background-size: cover;  /* Cover the entire box with the image */
+    background-position: center;  /* Center the image inside the box */
+}
+
+/* "C:\Users\acief\Documents\Projects\Gift_Selector\Pics\GiftSelector_CityView.png"*/
