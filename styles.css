@@ -114,9 +114,9 @@ li:hover .sub-category {
 }
 
 #gift-selector {
-    background-image: url('Pics/GiftSelector_CityView.png');  /* Replace with your image path */
-    background-size: cover;  /* Cover the entire box with the image */
+    background-image: url('"C:/Users/acief/Documents/Projects/Gift_Selector/projectportfolio/Pics/GiftSelector_CityView.png"');  /* Replace with your image path */
+    background-size: 1024px 1024px;  /* Cover the entire box with the image */
+    background-repeat: no-repeat; /* This ensures the image doesn't repeat */
     background-position: center;  /* Center the image inside the box */
 }
 
-/* "C:\Users\acief\Documents\Projects\Gift_Selector\Pics\GiftSelector_CityView.png"*/
