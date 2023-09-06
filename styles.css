@@ -26,13 +26,14 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 10;
+    z-index: 1010;  /* Increased from 10 to 1010 to ensure it's above the navbar */
 }
 
 .navbar {
     position: absolute;
     top: 40px;  /* Increase this to move the navbar items further down */
-    left: 0;  
+    z-index: 1000;
+    left: -300px;
     width: 300px;
     height: calc(100vh - 60px);  /* Adjusting the height to account for the top offset */
     background-color: rgba(32, 32, 32, 0.75);
@@ -66,10 +67,12 @@ li:hover .sub-category {
 
 .project-blocks {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 200px); /* This will create 3 columns of 200px each */
+    gap: 20px; /* Adjust this as necessary for spacing between blocks */
     padding: 40px;
+    justify-content: center; /* Center the grid on the page */
 }
+
 
 .project {
     height: 200px;
@@ -81,6 +84,11 @@ li:hover .sub-category {
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #3a3a3a;  /* Adding a border for visibility */
+}
+
+.project, #gift-selector {
+    width: 200px;
+    height: 200px;
 }
 
 .add-project-btn {
@@ -110,13 +118,39 @@ li:hover .sub-category {
 }
 
 .project-container h2 {
-    margin-bottom: 10px;  /* Space between the title and the box */
+    margin-bottom: 5px;  /* Reduce this value to make more space for the title */
 }
 
 #gift-selector {
-    background-image: url('Pics/GiftSelector_CityView.png');  /* Replace with your image path */
-    background-size: 1024px 1024px;  /* Cover the entire box with the image */
-    background-repeat: no-repeat; /* This ensures the image doesn't repeat */
-    background-position: center;  /* Center the image inside the box */
+    width: 200px;
+    height: 200px;
+    background-image: url('Pics/GiftSelector_CityView.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+.gift-selector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the title and block horizontally */
+}
+
+h2 {
+    text-align: center;  /* Center the title */
+    margin-bottom: 20px;  /* Add some space between the title and the grid */
+}
+
+.project-grid-wrapper {
+    position: relative;
+}
+
+.project-title {
+    position: absolute;
+    top: -10px; /* Adjusted this value to bring the title closer to the block */
+    left: 27%; /* Ensures the title is centered horizontally */
+    transform: translateX(-50%); /* Shifts the title to the left by half its width */
+    z-index: 1; /* Ensure the title appears above the blocks */
+    text-align: center; /* Center the title text */
+    width: 200px; /* Match the width of the blocks */
+}
